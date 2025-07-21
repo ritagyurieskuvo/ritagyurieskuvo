@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>Rita & Gyuri esküvője</h1>
-    <p>2025. augusztus 30. - Budapest</p>
+    <p>2025. október 18. - Mohács</p>
   </header>
 
   <section id="info">
@@ -38,28 +38,42 @@
     <p>A jelenléted a legnagyobb ajándék, de ha szeretnél meglepni minket, örömmel fogadunk borítékot vagy utazási hozzájárulást.</p>
   </section>
 
-  <section id="rsvp">
-    <h2>Visszajelzés (RSVP)</h2>
-    <form>
-      <label for="name">Név:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="attendance">Részt veszel?</label>
-      <select id="attendance" name="attendance">
-        <option value="igen">Igen</option>
-        <option value="nem">Nem</option>
-        <option value="talán">Talán</option>
-      </select>
-
-      <button type="submit">Küldés</button>
-    </form>
+  <section id="calendar">
+    <h2>Add hozzá a naptáradhoz</h2>
+    <button onclick="createCalendarEvent()">📅 Naptárbejegyzés letöltése</button>
   </section>
 
   <footer>
     <p>Köszönjük, hogy részese vagy a nagy napunknak! ❤️</p>
   </footer>
+
+  <script>
+  function createCalendarEvent() {
+    const title = 'Rita & Gyuri esküvője';
+    const description = 'Esküvő a Selyemgyárban, szertartás 15:00-tól, vacsora 17:00-tól.';
+    const location = 'Selyemgyár, Mohács';
+    const startDate = '20251018T120000'; // 15:00 CEST == 13:00 UTC
+    const endDate = '20251019T060000';
+
+    const calendarData = `
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Eskuvo//HU
+BEGIN:VEVENT
+SUMMARY:${title}
+DESCRIPTION:${description}
+LOCATION:${location}
+DTSTART:${startDate}
+DTEND:${endDate}
+END:VEVENT
+END:VCALENDAR`.trim();
+
+    const blob = new Blob([calendarData], { type: 'text/calendar;charset=utf-8' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'eskuvo.ics';
+    link.click();
+  }
+</script>
 </body>
 </html>
