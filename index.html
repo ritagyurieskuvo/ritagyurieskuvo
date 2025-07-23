@@ -6,59 +6,78 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>Esküvői Meghívó oldal - Rita & Gyuri </title>
-  <link rel="stylesheet" href="style.css?v=3" />
+  <title>Esküvői Meghívó oldal - Rita & Gyuri</title>
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
   <header>
-    <h1>Rita & Gyuri esküvője</h1>
-    <p>2025. október 18. - Mohács</p>
+    <img src="ritagyuri.png" alt="Rita és Gyuri portré" class="header-photo" />
+    <h1 class="lang-hu">Rita & Gyuri esküvője</h1>
+    <h1 class="lang-en">Rita & Gyuri's Wedding</h1>
+    <p class="lang-hu">2025. október 18. - Mohács</p>
+    <p class="lang-en">18 October 2025 – Mohács</p>
+    <div id="countdown" class="countdown">
+    <p class="lang-hu">Már csak <span id="timer">...</span> van hátra a nagy napig!</p>
+    <p class="lang-en">Only <span id="timer-en">...</span> left until the big day!</p>
+    </div>
+    <button id="lang-toggle">English</button>
   </header>
 
   <section id="info">
-    <h2>Fontos információk</h2>
+    <h2 class="lang-hu">Fontos információk</h2>
+    <h2 class="lang-en">Important Information</h2>
     <ul>
-      <li><strong>Helyszín:</strong> Selyemgyár, Mohács</li>
-      <li><strong>Szertartás:</strong> 14:00 - a mohácsi templomban</li>
-      <li><strong>Vacsora & buli:</strong> 18:00 - a díszteremben</li>
-      <li><strong>Dress code:</strong> Elegáns, nyári öltözék</li>
+      <li><strong class="lang-hu">Helyszín:</strong><strong class="lang-en">Venue:</strong> Selyemgyár, Mohács</li>
+      <li><strong class="lang-hu">Szertartás:</strong><strong class="lang-en">Ceremony:</strong> 14:00 – a mohácsi templomban / in the church</li>
+      <li><strong class="lang-hu">Vacsora & buli:</strong><strong class="lang-en">Dinner & party:</strong> 18:00 – a díszteremben / in the banquet hall</li>
+      <li><strong class="lang-hu">Dress code:</strong><strong class="lang-en">Dress code:</strong> Elegáns, nyári öltözék / Elegant summer wear</li>
     </ul>
   </section>
 
   <section id="program">
-    <h2>Program</h2>
+    <h2 class="lang-hu">Program</h2>
+    <h2 class="lang-en">Schedule</h2>
     <ol>
-      <li>14:30 - Érkezés</li>
-      <li>15:00 - Polgári szertartás</li>
-      <li>16:00 - Fotózás, koccintás</li>
-      <li>17:00 - Vacsora</li>
-      <li>19:00 - Tánc és buli hajnalig</li>
+      <li class="lang-hu">14:30 – Érkezés</li>
+      <li class="lang-en">14:30 – Arrival</li>
+      <li class="lang-hu">15:00 – Polgári szertartás</li>
+      <li class="lang-en">15:00 – Civil ceremony</li>
+      <li class="lang-hu">16:00 – Fotózás, koccintás</li>
+      <li class="lang-en">16:00 – Photos & toast</li>
+      <li class="lang-hu">17:00 – Vacsora</li>
+      <li class="lang-en">17:00 – Dinner</li>
+      <li class="lang-hu">19:00 – Tánc és buli hajnalig</li>
+      <li class="lang-en">19:00 – Dance and party until dawn</li>
     </ol>
   </section>
 
   <section id="ajandek">
-    <h2>Ajándék ötletek</h2>
-    <p>A jelenléted a legnagyobb ajándék, de ha szeretnél meglepni minket, örömmel fogadunk borítékot vagy utazási hozzájárulást.</p>
+    <h2 class="lang-hu">Ajándék ötletek</h2>
+    <h2 class="lang-en">Gift Suggestions</h2>
+    <p class="lang-hu">A jelenléted a legnagyobb ajándék, de ha szeretnél meglepni minket, örömmel fogadunk borítékot vagy utazási hozzájárulást.</p>
+    <p class="lang-en">Your presence is the greatest gift, but if you wish to surprise us, we gladly accept an envelope or a contribution to our travels.</p>
   </section>
 
   <section id="calendar">
-    <h2>Add hozzá a naptáradhoz</h2>
-    <button onclick="createCalendarEvent()">📅 Naptárbejegyzés letöltése</button>
+    <h2 class="lang-hu">Add hozzá a naptáradhoz</h2>
+    <h2 class="lang-en">Add to Your Calendar</h2>
+    <button onclick="createCalendarEvent()">📅 <span class="lang-hu">Naptárbejegyzés letöltése</span><span class="lang-en">Download calendar event</span></button>
   </section>
 
   <footer>
-    <p>Köszönjük, hogy részese vagy a nagy napunknak! ❤️</p>
+    <p class="lang-hu">Köszönjük, hogy részese vagy a nagy napunknak! ❤️</p>
+    <p class="lang-en">Thank you for being part of our big day! ❤️</p>
   </footer>
 
   <script>
-  function createCalendarEvent() {
-    const title = 'Rita & Gyuri esküvője';
-    const description = 'Esküvő a Selyemgyárban, szertartás 14:00-tól, vacsora 18:00-tól.';
-    const location = 'Selyemgyár, Mohács';
-    const startDate = '20251018T140000'; // 15:00 CEST == 13:00 UTC
-    const endDate = '20251019T040000';
+    function createCalendarEvent() {
+      const title = 'Rita & Gyuri esküvője';
+      const description = 'Esküvő a Selyemgyárban, szertartás 14:00-tól, vacsora 18:00-tól.';
+      const location = 'Selyemgyár, Mohács';
+      const startDate = '20251018T140000';
+      const endDate = '20251019T040000';
 
-    const calendarData = `
+      const calendarData = `
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Eskuvo//HU
@@ -71,12 +90,57 @@ DTEND:${endDate}
 END:VEVENT
 END:VCALENDAR`.trim();
 
-    const blob = new Blob([calendarData], { type: 'text/calendar;charset=utf-8' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'eskuvo.ics';
-    link.click();
-  }
-</script>
+      const blob = new Blob([calendarData], { type: 'text/calendar;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'eskuvo.ics';
+      link.click();
+    }
+
+    // 🌐 Language toggle logic
+    const langToggle = document.getElementById('lang-toggle');
+    let currentLang = 'hu';
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'hu' ? 'en' : 'hu';
+      document.querySelectorAll('[class^="lang-"]').forEach(el => {
+        el.style.display = el.classList.contains(`lang-${currentLang}`) ? '' : 'none';
+      });
+      langToggle.textContent = currentLang === 'hu' ? 'English' : 'Magyarul';
+    });
+
+    // Default: show Hungarian
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[class^="lang-"]').forEach(el => {
+        el.style.display = el.classList.contains('lang-hu') ? '' : 'none';
+      });
+    });
+
+    // ⏳ Countdown logic
+    function updateCountdown() {
+      const weddingDate = new Date("2025-10-18T00:00:00");
+      const now = new Date();
+      const diff = weddingDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('timer').textContent = "🕊️ Itt a nap!";
+        document.getElementById('timer-en').textContent = "🕊️ It’s the day!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      const huText = `${days} nap, ${hours} óra, ${minutes} perc, ${seconds} másodperc`;
+      const enText = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+
+      document.getElementById('timer').textContent = huText;
+      document.getElementById('timer-en').textContent = enText;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 </body>
 </html>
