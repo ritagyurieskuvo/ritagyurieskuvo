@@ -77,3 +77,130 @@ footer {
   margin-top: 2rem;
   font-style: italic;
 }
+
+/* Általános stílus */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f5f9f5; /* világos zöldes háttér */
+  color: #2e3d2f; /* sötétzöldes szöveg */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Fejléc */
+header {
+  background-color: #e6efe6; /* halványzöld */
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid #bcd2bc;
+}
+
+.header-photo {
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #3e5c3e;
+  font-weight: normal;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #4f6a4f;
+}
+
+/* Szekciók */
+section {
+  background-color: #ffffffcc; /* enyhén áttetsző fehér */
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px #dfe8df;
+}
+
+/* Címsorok */
+h2 {
+  color: #4a6b4a;
+  border-bottom: 2px solid #bcd2bc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+/* Listák */
+ul, ol {
+  margin-left: 1.5rem;
+  color: #2e3d2f;
+}
+
+/* Gomb és űrlap */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #3e5c3e;
+}
+
+form input, form select, form button {
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #c7dcc7;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: #a7c8a7;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #8fb38f;
+}
+
+/* Naptár gomb */
+#calendar button {
+  background-color: #6f9b6f;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#calendar button:hover {
+  background-color: #5b825b;
+}
+
+/* Lábléc */
+footer {
+  text-align: center;
+  background-color: #e6efe6;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-style: italic;
+  color: #4f6a4f;
+}
+
+.countdown {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #2f4f2f;
+  font-weight: bold;
+}
