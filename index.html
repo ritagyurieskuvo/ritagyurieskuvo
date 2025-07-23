@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>Esküvői Meghívó oldal - Rita & Gyuri</title>
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
   <header>
@@ -31,6 +31,35 @@
     </div>
   </section>
 
+<section id="helyszin">
+  <h2 class="lang-hu">Helyszín</h2>
+  <h2 class="lang-en" style="display:none;">Location</h2>
+
+  <p class="lang-hu">
+    A templomi szertartás helyszíne <strong>Magyarok Nagyasszonya plébániatemplom</strong><br>
+    Cím: 7700 Mohács, Széchenyi tér 2
+  </p>
+  <p class="lang-en" style="display:none;">
+    The mass take place at<strong>Magyarok Nagyasszonya plébániatemplom</strong><br>
+     Cím: 7700 Mohács, Széchenyi tér 2
+  </p>
+
+  <button class="map-button lang-hu" onclick="openMassMap()">📍 Útvonal megnyitása</button>
+
+
+  <p class="lang-hu">
+    Az esküvő helyszíne a <strong>Selyemgyár</strong><br>
+    Cím: 7700 Mohács, Selyemgyár u. 1.
+  </p>
+  <p class="lang-en" style="display:none;">
+    The wedding will take place at <strong>Selyemgyár</strong><br>
+    Address: 7700 Mohács, Selyemgyár u. 1.
+  </p>
+
+  <button class="map-button lang-hu" onclick="openMap()">📍 Útvonal megnyitása</button>
+  <button class="map-button lang-en" onclick="openMap()" style="display:none;">📍 Open Directions</button>
+</section>
+
   <section id="info">
     <h2 class="lang-hu">Fontos információk</h2>
     <h2 class="lang-en">Important Information</h2>
@@ -45,14 +74,14 @@
 
   <section id="program">
     <h2 class="lang-hu">Program</h2>
-    <ol>
+    <ul>
       <li class="lang-hu">13:30 – Érkezés</li>
       <li class="lang-hu">14:00 – Templomi szertartás</li>
       <li class="lang-hu">16:15 – Polgári szertartás</li>
       <li class="lang-hu">16:40 – Fotózás, koccintás</li>
       <li class="lang-hu">18:00 – Vacsora</li>
       <li class="lang-hu">20:00 – Tánc és buli hajnalig</li>
-    </ol>
+    </ul>
   </section>
 
   <section id="ajandek">
@@ -143,6 +172,16 @@ END:VCALENDAR`.trim();
 
     setInterval(updateCountdown, 1000);
     updateCountdown();
+
+    function openMap() {
+      const mapUrl = "https://maps.app.goo.gl/qPrJGKhfq3HYtYQy6";
+      window.open(mapUrl, "_blank");
+   }
+
+   function openMassMap() {
+      const mapUrl = "https://maps.app.goo.gl/NCJxHSyA8HJQ3VH8A";
+    window.open(mapUrl, "_blank");
+    }
   </script>
 </body>
 </html>
