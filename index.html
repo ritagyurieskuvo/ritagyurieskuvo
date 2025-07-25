@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>Esküvői Meghívó oldal - Rita & Gyuri</title>
-  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="stylesheet" href="style.css?v=6" />
 </head>
 <body>
   <header>
@@ -40,11 +40,11 @@
     Cím: 7700 Mohács, Széchenyi tér 2
   </p>
   <p class="lang-en" style="display:none;">
-    The mass take place at<strong>Magyarok Nagyasszonya plébániatemplom</strong><br>
+    The mass take place at <strong>Magyarok Nagyasszonya plébániatemplom</strong><br>
      Cím: 7700 Mohács, Széchenyi tér 2
   </p>
 
-  <button class="map-button lang-hu" onclick="openMassMap()">📍 Útvonal megnyitása</button>
+  <button class="map-button" onclick="openMassMap()">📍 <span class="lang-hu">Útvonal megnyitása</span><span class="lang-en">Open Directions</span></button>
 
 
   <p class="lang-hu">
@@ -56,8 +56,7 @@
     Address: 7700 Mohács, Selyemgyár u. 1.
   </p>
 
-  <button class="map-button lang-hu" onclick="openMap()">📍 Útvonal megnyitása</button>
-  <button class="map-button lang-en" onclick="openMap()" style="display:none;">📍 Open Directions</button>
+  <button class="map-button" onclick="openMap()">📍 <span class="lang-hu">Útvonal megnyitása</span><span class="lang-en">Open Directions</span></button>
 </section>
 
   <section id="info">
@@ -72,17 +71,26 @@
     </ul>
   </section>
 
-  <section id="program">
-    <h2 class="lang-hu">Program</h2>
-    <ul>
-      <li class="lang-hu">13:30 – Érkezés</li>
-      <li class="lang-hu">14:00 – Templomi szertartás</li>
-      <li class="lang-hu">16:15 – Polgári szertartás</li>
-      <li class="lang-hu">16:40 – Fotózás, koccintás</li>
-      <li class="lang-hu">18:00 – Vacsora</li>
-      <li class="lang-hu">20:00 – Tánc és buli hajnalig</li>
-    </ul>
-  </section>
+<section id="program">
+  <h2 class="lang-hu">Program</h2>
+  <h2 class="lang-en" style="display:none;">Schedule</h2>
+
+  <ul>
+    <li class="lang-hu">13:30 – Érkezés</li>
+    <li class="lang-hu">14:00 – Templomi szertartás</li>
+    <li class="lang-hu">16:15 – Polgári szertartás</li>
+    <li class="lang-hu">16:40 – Fotózás, koccintás</li>
+    <li class="lang-hu">18:00 – Vacsora</li>
+    <li class="lang-hu">20:00 – Tánc és buli hajnalig</li>
+
+    <li class="lang-en" style="display:none;">13:30 – Arrival</li>
+    <li class="lang-en" style="display:none;">14:00 – Church ceremony</li>
+    <li class="lang-en" style="display:none;">16:15 – Civil ceremony</li>
+    <li class="lang-en" style="display:none;">16:40 – Photos & champagne</li>
+    <li class="lang-en" style="display:none;">18:00 – Dinner</li>
+    <li class="lang-en" style="display:none;">20:00 – Dancing & party until dawn</li>
+  </ul>
+</section>
 
   <section id="ajandek">
     <h2 class="lang-hu">Ajándék ötletek</h2>
@@ -92,7 +100,7 @@
   </section>
 
   <section id="nyelvvaltas">
-    <button id="lang-toggle">English</button>
+      <button id="lang-toggle">🇬🇧 English</button>
   </section>
 
   <footer>
@@ -103,8 +111,8 @@
   <script>
     function createCalendarEvent() {
       const title = 'Rita & Gyuri esküvője';
-      const description = 'Esküvő a Selyemgyárban, szertartás 14:00-tól, vacsora 18:00-tól.';
-      const location = 'Selyemgyár, Mohács';
+      const description = 'Szertartás a Magyarok Nagyasszonya plébániatemplomban 14:00-tól, vacsora 18:00-tól a Selyemgyárban.';
+      const location = 'https://maps.app.goo.gl/qPrJGKhfq3HYtYQy6';
       const startDate = '20251018T140000';
       const endDate = '20251019T040000';
 
@@ -136,7 +144,7 @@ END:VCALENDAR`.trim();
       document.querySelectorAll('[class^="lang-"]').forEach(el => {
         el.style.display = el.classList.contains(`lang-${currentLang}`) ? '' : 'none';
       });
-      langToggle.textContent = currentLang === 'hu' ? 'English' : 'Magyarul';
+      langToggle.textContent = currentLang === 'hu' ? '🇬🇧 English' : '🇭🇺 Magyarul';
     });
 
     // Default: show Hungarian
