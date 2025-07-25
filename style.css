@@ -92,8 +92,7 @@ form button:hover {
   background-color: #8fb38f;
 }
 
-/* Naptár gomb */
-#calendar button {
+button {
   background-color: #6f9b6f;
   color: #fff;
   padding: 0.8rem 1.2rem;
@@ -104,7 +103,7 @@ form button:hover {
   transition: background-color 0.3s;
 }
 
-#calendar button:hover {
+button:hover {
   background-color: #5b825b;
 }
 
